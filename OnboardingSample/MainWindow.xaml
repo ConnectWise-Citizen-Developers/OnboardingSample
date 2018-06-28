@@ -1,0 +1,47 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventProcessor"
+        mc:Ignorable="d"
+        Title="Invent Automation Suite" Height="250.542" Width="773">
+
+    <Grid x:Name="Main_Elements">
+        <ListBox x:Name="LB_Contacts" HorizontalAlignment="Left" Height="195" Margin="10,10,0,0" VerticalAlignment="Top" Width="373" Panel.ZIndex="5555" Visibility="Hidden"/>
+        <ListBox x:Name="LB_Outputs" HorizontalAlignment="Left" Height="109" Margin="170,10,0,0" VerticalAlignment="Top" Width="337"/>
+        <TextBox x:Name="TB_Company" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+        <Button x:Name="BTN_Search" Content="Search" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="155" Height="81"/>
+        <ListBox x:Name="LB_Parameters" HorizontalAlignment="Left" Height="81" Margin="10,124,0,0" VerticalAlignment="Top" Width="417" SelectionMode="Multiple">
+            <ListBoxItem Content="Set Company Status" IsSelected="True"/>
+            <ListBoxItem Content="Add to Workflow Rules"/>
+            <ListBoxItem Content="Create Invent Ticket"/>
+        </ListBox>
+        <Button x:Name="BTN_Process" Content="Process" HorizontalAlignment="Left" Margin="432,124,0,0" VerticalAlignment="Top" Width="75" Height="81"/>
+        <ListBox x:Name="AuditBox" HorizontalAlignment="Left" Height="195" Margin="512,10,0,0" VerticalAlignment="Top" Width="243"/>
+        <Button x:Name="BTN_Select_Contact" Content="Select Contact" HorizontalAlignment="Left" Margin="388,10,0,0" VerticalAlignment="Top" Width="119" Height="195" Visibility="Hidden" />
+        <Grid x:Name="grid_product" Margin="10" Visibility="Hidden">
+            <Button x:Name="btn_Manage" Content="Manage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Height="200" FontSize="48"/>
+            <Button x:Name="btn_Both" Content="Both" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Height="200" FontSize="48" Margin="251,0,0,0"/>
+            <Button x:Name="btn_Automate" Content="Automate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Height="200" FontSize="48" Margin="500,0,0,0"/>
+        </Grid>
+        <Grid x:Name="grid_vendor" Margin="10" Visibility="Hidden">
+            <Button x:Name="btn_existingvendor" Content="Existing Vendor" HorizontalAlignment="Left" VerticalAlignment="Top" Width="370" Height="200" FontSize="48"/>
+            <Button x:Name="btn_newvendor" Content="New Vendor" HorizontalAlignment="Left" VerticalAlignment="Top" Width="370" Height="200" Margin="375,0,0,0" FontSize="48"/>
+        </Grid>
+        <Grid x:Name="grid_int" Margin="10" Visibility="Hidden">
+            <Button x:Name="btn_existingInt" Content="Audit Existing" HorizontalAlignment="Left" VerticalAlignment="Top" Width="370" Height="200" FontSize="48"/>
+            <Button x:Name="btn_newInt" Content="New Blueprint" HorizontalAlignment="Left" VerticalAlignment="Top" Width="370" Height="200" Margin="375,0,0,0" FontSize="48"/>
+        </Grid>
+        <Grid x:Name="grid_resold" Margin="10" Visibility="Hidden">
+            <Button x:Name="btn_resold" Content="Resold Vendor" HorizontalAlignment="Left" VerticalAlignment="Top" Width="370" Height="200" FontSize="48"/>
+            <Button x:Name="btn_notresold" Content="Not a Resold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="370" Height="200" Margin="375,0,0,0" FontSize="48"/>
+        </Grid>
+        <Grid x:Name="grid_certification" Margin="10" Visibility="Hidden">
+            <Button x:Name="btn_certified" Content="Certified" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Height="200" FontSize="48"/>
+            <Button x:Name="btn_power" Content="Power" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Height="200" FontSize="48" Margin="251,0,0,0"/>
+            <Button x:Name="btn_master" Content="Master" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Height="200" FontSize="48" Margin="500,0,0,0"/>
+        </Grid>
+    </Grid>
+
+</Window>
